@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="th" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="คอร์สพื้นฐานปัญญาประดิษฐ์ (AI for Beginners) เรียนรู้ AI/ML แบบเข้าใจง่าย พร้อมโปรเจกต์จริง เหมาะสำหรับผู้เริ่มต้น">
+    <link rel="stylesheet" href="./output.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>คอร์สพื้นฐานปัญญาประดิษฐ์ (AI for Beginners)</title>
+</head>
+<body class="bg-gray-50">
+
+    <!-- Navbar -->
+    <nav class="flex justify-between items-center px-6 py-4 bg-white shadow-sm sticky top-0 z-50">
+      <div class="text-2xl font-bold bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-600 bg-clip-text text-transparent">AI ACADEMY</div>
+
+      <ul class="text-gray-600 space-x-8 hidden md:flex">
+        <li><a href="#topics" class="hover:text-indigo-600 font-bold">หัวข้อเรียน</a></li>
+        <li><a href="#teachers" class="hover:text-indigo-600 font-bold">ผู้สอน</a></li>
+        <li><a href="#schedule" class="hover:text-indigo-600 font-bold">ตารางเรียน</a></li>
+        <li><a href="#pricing" class="hover:text-indigo-600 font-bold">ค่าเรียน</a></li>
+        <li><a href="#faq" class="hover:text-indigo-600 font-bold">คำถามที่พบบ่อย</a></li>
+      </ul>
+
+      <a href="#contact" class="bg-indigo-500 text-white font-bold rounded-2xl hover:bg-indigo-600 px-5 py-2">สมัครเรียน</a>
+
+      <button id="menu-btn" class="md:hidden text-gray-700" aria-label="เปิดเมนู">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </nav>
+
+    <!-- Mobile menu -->
+    <ul id="mobile-menu" class="hidden md:hidden flex-col bg-white text-gray-600 font-bold px-6 py-4 space-y-3 shadow-sm">
+      <li><a href="#topics" class="block hover:text-indigo-600">หัวข้อเรียน</a></li>
+      <li><a href="#teachers" class="block hover:text-indigo-600">ผู้สอน</a></li>
+      <li><a href="#schedule" class="block hover:text-indigo-600">ตารางเรียน</a></li>
+      <li><a href="#pricing" class="block hover:text-indigo-600">ค่าเรียน</a></li>
+      <li><a href="#faq" class="block hover:text-indigo-600">คำถามที่พบบ่อย</a></li>
+    </ul>
+
+    <!-- Hero -->
+     <section class="bg-gradient-to-bl from-blue-400 via-cyan-400 to-purple-500">
+      <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 py-16 px-6 items-center">
+        <div class="flex flex-col items-start justify-center">
+          <p class="text-4xl md:text-5xl text-white font-bold leading-tight">คอร์สพื้นฐานปัญญา<br>ประดิษฐ์ (AI for Beginners)</p>
+          <p class="text-white mt-4">เรียนรู้ AI/ML แบบเข้าใจง่าย พร้อมโปรเจกต์สุดคูลจริง เหมาะสำหรับผู้เริ่มต้น<br>และผู้ที่อยากต่อยอด</p>
+
+          <div class="flex flex-wrap gap-3 mt-6">
+            <a href="#contact" class="bg-white rounded-lg font-semibold text-blue-500 px-5 py-2 hover:text-indigo-600 transition">สมัครเรียน</a>
+            <a href="#topics" class="bg-white rounded-lg font-semibold text-blue-500 px-5 py-2 hover:text-indigo-600 transition">ดูหัวข้อเรียน</a>
+          </div>
+
+          <div class="flex flex-wrap gap-3 mt-6">
+            <span class="flex items-center gap-2 bg-white rounded-2xl text-blue-700 text-sm px-5 py-2">
+              <svg class="w-4 h-4 text-blue-500 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+              พื้นฐานแน่น
+            </span>
+            <span class="flex items-center gap-2 bg-white rounded-2xl text-blue-700 text-sm px-5 py-2">
+              <svg class="w-4 h-4 text-blue-500 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+              โปรเจกต์จริง
+            </span>
+            <span class="flex items-center gap-2 bg-white rounded-2xl text-blue-700 text-sm px-5 py-2">
+              <svg class="w-4 h-4 text-blue-500 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+              มีใบประกาศนียบัตร
+            </span>
+          </div>
+        </div>
+        <div class="flex justify-center">
+          <!-- Photo by Igor Omilaev on Unsplash (free to use, no attribution required) -->
+          <img src="https://images.unsplash.com/photo-1694903089438-bf28d4697d9a?fm=jpg&q=80&w=1200&auto=format&fit=crop" alt="หุ่นยนต์และมือมนุษย์ สื่อถึงการเรียนรู้ AI ร่วมกัน" class="rounded-2xl shadow-lg w-full max-w-md object-cover aspect-[4/3]">
+        </div>
+      </div>
+     </section>
+
+    <!-- Courses -->
+      <section id="topics" class="max-w-7xl mx-auto mt-16 px-6 scroll-mt-20">
+        <p class="text-2xl font-bold text-purple-600 mb-6">หัวข้อเรียน 6 สัปดาห์</p>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="bg-blue-50 border border-blue-100 shadow-md rounded-2xl p-6 hover:-translate-y-1 transition">
+            <p class="text-sm text-blue-500 font-semibold">สัปดาห์ที่ 1</p>
+            <p class="font-bold text-lg mt-2">รู้จัก AI</p>
+            <p class="text-gray-600 text-sm mt-2">คำจำกัดความ ประวัติ และความสำคัญของ AI</p>
+          </div>
+
+          <div class="bg-green-50 border border-green-100 shadow-md p-6 rounded-2xl hover:-translate-y-1 transition">
+            <p class="text-sm text-cyan-500 font-semibold">สัปดาห์ที่ 2</p>
+            <p class="text-lg font-bold mt-2">ข้อมูล & ML พื้นฐาน</p>
+            <p class="text-gray-600 text-sm mt-2">ชุดข้อมูล การแบ่งชุด และเรียนรู้แบบทำนาย/ไม่ทำนาย</p>
+          </div>
+
+          <div class="bg-purple-50 border border-purple-100 rounded-2xl shadow p-6 hover:-translate-y-1 transition">
+             <p class="text-sm text-pink-500 font-semibold">สัปดาห์ที่ 3</p>
+             <p class="text-lg font-bold mt-2">โมเดล & ประเมินผล</p>
+             <p class="text-gray-600 mt-2 text-sm">แนวคิดโมเดลพื้นฐาน ตัวชี้วัด และการหลีกเลี่ยง overfitting</p>
+          </div>
+
+          <div class="bg-amber-50 border border-amber-100 rounded-2xl shadow p-6 hover:-translate-y-1 transition">
+            <p class="text-sm text-yellow-500 font-semibold">สัปดาห์ที่ 4</p>
+            <p class="text-lg font-bold mt-2">ปูพื้น Deep Learning</p>
+            <p class="text-gray-600 text-sm mt-2">โครงข่ายประสาทเทียมและส่วนย่อยยอดนิยม</p>
+          </div>
+
+          <div class="bg-fuchsia-50 border border-fuchsia-100 rounded-2xl shadow p-6 hover:-translate-y-1 transition">
+            <p class="text-sm text-fuchsia-500 font-semibold">สัปดาห์ที่ 5</p>
+            <p class="text-lg font-bold mt-2">ประยุกต์ใช้ AI</p>
+            <p class="text-gray-600 text-sm mt-2">นำโมเดลไปใช้แก้ปัญหาจริงในงานต่าง ๆ</p>
+          </div>
+
+          <div class="bg-red-50 border border-red-100 rounded-2xl shadow p-6 hover:-translate-y-1 transition">
+            <p class="text-sm text-red-500 font-semibold">สัปดาห์ที่ 6</p>
+            <p class="text-lg font-bold mt-2">โปรเจกต์ปิดคอร์ส</p>
+            <p class="text-gray-600 text-sm mt-2">ลงมือทำโปรเจกต์จริงและนำเสนอผลงาน</p>
+          </div>
+        </div>
+      </section>
+
+    <!-- Banner -->
+    <section class="mt-16 relative">
+      <!-- Photo by Steve A Johnson on Unsplash (free to use, no attribution required) -->
+      <img src="https://images.unsplash.com/photo-1677442135703-1787eea5ce01?fm=jpg&q=80&w=1600&auto=format&fit=crop" alt="วงจรอิเล็กทรอนิกส์รูปสมอง สื่อถึงปัญญาประดิษฐ์" class="w-full h-64 md:h-80 object-cover">
+      <div class="absolute inset-0 bg-gradient-to-r from-indigo-900/80 to-purple-900/40 flex items-center">
+        <p class="text-white text-2xl md:text-3xl font-bold max-w-2xl px-6 md:px-16">เข้าใจเบื้องหลังของ AI ตั้งแต่แนวคิดพื้นฐานจนถึงการใช้งานจริง</p>
+      </div>
+    </section>
+
+    <!-- Teachers -->
+     <section id="teachers" class="max-w-7xl mx-auto mt-16 px-6 scroll-mt-20">
+      <p class="text-2xl font-bold text-purple-600 mb-6">ผู้สอน</p>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+        <div class="bg-pink-100 border border-pink-200 rounded-xl shadow-sm flex items-start">
+          <div class="w-16 h-16 rounded-full mt-6 ml-4 flex items-center justify-center bg-pink-400 text-white font-bold text-lg shrink-0">อด</div>
+          <div class="flex flex-col p-5 justify-center">
+            <p class="font-bold text-gray-800">ผศ. ดร. เอด้า</p>
+            <span class="text-sm text-gray-500">นักวิจัย ML เชิงประยุกต์</span>
+            <p class="text-gray-700 text-sm mt-1">เชี่ยวชาญการนำ AI ไปใช้ในอุตสาหกรรมต่าง ๆ</p>
+          </div>
+        </div>
+
+        <div class="flex items-start bg-indigo-100 border border-indigo-200 rounded-2xl shadow">
+          <div class="w-16 h-16 rounded-full mt-6 ml-4 flex items-center justify-center bg-indigo-400 text-white font-bold text-lg shrink-0">จง</div>
+          <div class="flex justify-center p-5 flex-col">
+            <p class="font-bold text-gray-800">รศ. ดร. เจ๋ง</p>
+            <span class="text-gray-500 text-sm">ที่ปรึกษาด้านข้อมูล</span>
+            <p class="text-gray-700 text-sm mt-1">ช่วยองค์กรออกแบบโซลูชันข้อมูลและ AI</p>
+          </div>
+        </div>
+       </div>
+     </section>
+
+    <!-- Schedule -->
+     <section id="schedule" class="max-w-7xl mx-auto mt-16 px-6 py-6 bg-white rounded-2xl scroll-mt-20">
+      <p class="text-xl font-bold text-blue-600 mb-4">ตารางเรียน</p>
+      <div class="overflow-x-auto">
+        <table class="border border-gray-200 overflow-hidden w-full">
+          <thead>
+            <tr class="bg-blue-50 text-gray-700 text-sm">
+              <th class="px-4 py-2 border">สัปดาห์</th>
+              <th class="px-4 py-2 border">หัวข้อ</th>
+              <th class="px-4 py-2 border">วันที่</th>
+              <th class="px-4 py-2 border">เวลา</th>
+              <th class="px-4 py-2 border">รูปแบบ</th>
+            </tr>
+          </thead>
+          <tbody class="text-sm">
+            <tr class="hover:bg-gray-50">
+              <td class="border px-4 py-2 text-center">1</td>
+              <td class="border px-4 py-2">รู้จัก AI</td>
+              <td class="border px-4 py-2">1 ก.ย.</td>
+              <td class="border px-4 py-2">18:00–20:00</td>
+              <td class="border px-4 py-2">ออนไลน์</td>
+            </tr>
+            <tr class="hover:bg-gray-50">
+              <td class="border px-4 py-2 text-center">2</td>
+              <td class="border px-4 py-2">ข้อมูล & ML พื้นฐาน</td>
+              <td class="border px-4 py-2">8 ก.ย.</td>
+              <td class="border px-4 py-2">18:00–20:00</td>
+              <td class="border px-4 py-2">ออนไลน์</td>
+            </tr>
+            <tr class="hover:bg-gray-50">
+              <td class="border px-4 py-2 text-center">3</td>
+              <td class="border px-4 py-2">โมเดล & ประเมินผล</td>
+              <td class="border px-4 py-2">15 ก.ย.</td>
+              <td class="border px-4 py-2">18:00–20:00</td>
+              <td class="border px-4 py-2">ห้องเรียน</td>
+            </tr>
+            <tr class="hover:bg-gray-50">
+              <td class="border px-4 py-2 text-center">4</td>
+              <td class="border px-4 py-2">ปูพื้น Deep Learning</td>
+              <td class="border px-4 py-2">22 ก.ย.</td>
+              <td class="border px-4 py-2">18:00–20:00</td>
+              <td class="border px-4 py-2">ห้องเรียน</td>
+            </tr>
+            <tr class="hover:bg-gray-50">
+              <td class="border px-4 py-2 text-center">5</td>
+              <td class="border px-4 py-2">ประยุกต์ใช้ AI</td>
+              <td class="border px-4 py-2">29 ก.ย.</td>
+              <td class="border px-4 py-2">18:00–20:00</td>
+              <td class="border px-4 py-2">ออนไลน์</td>
+            </tr>
+            <tr class="hover:bg-gray-50">
+              <td class="border px-4 py-2 text-center">6</td>
+              <td class="border px-4 py-2">โปรเจกต์ปิดคอร์ส</td>
+              <td class="border px-4 py-2">6 ต.ค.</td>
+              <td class="border px-4 py-2">18:00–20:00</td>
+              <td class="border px-4 py-2">ออนไลน์</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+     </section>
+
+      <!-- ค่าเรียน -->
+       <section id="pricing" class="max-w-7xl mx-auto mt-16 px-6 scroll-mt-20">
+        <p class="text-xl font-bold text-blue-600 mb-6">ค่าเรียน & การสมัคร</p>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
+
+          <div class="bg-gray-100 border border-gray-200 rounded-xl p-6 shadow-sm flex flex-col items-start">
+            <h3 class="font-bold">เริ่มต้น</h3>
+            <p class="text-sm text-gray-500">Audit only</p>
+            <p class="text-3xl font-bold my-4">฿0</p>
+            <ul class="text-sm text-gray-600 space-y-1 mb-6">
+              <li>• เข้าฟังบรรยายสด</li>
+              <li>• เอกสารประกอบ</li>
+            </ul>
+            <button class="w-full mt-auto bg-black text-white py-2 rounded-full font-medium hover:bg-gray-800 transition">
+              เลือกแพ็กนี้
+            </button>
+          </div>
+
+          <!-- แพ็กเกจมาตรฐาน -->
+          <div class="bg-blue-50 border-2 border-blue-300 rounded-xl p-6 flex flex-col items-start shadow-md relative pt-8">
+            <span class="absolute -top-3 left-1/2 -translate-x-1/2 bg-blue-500 text-white px-3 py-1 text-xs rounded-full whitespace-nowrap">
+              ยอดเยี่ยม
+            </span>
+            <h3 class="font-bold">มาตรฐาน</h3>
+            <p class="text-sm text-gray-500">มีใบประกาศ</p>
+            <p class="text-3xl font-bold text-blue-600 my-4">฿2,900</p>
+            <ul class="text-sm text-gray-600 mb-6 space-y-2">
+              <li>• แบบฝึกหัดตรวจอัตโนมัติ</li>
+              <li>• ตอบคำถามกลุ่มแชท</li>
+              <li>• ใบประกาศนียบัตรคอร์ส</li>
+            </ul>
+            <button class="w-full mt-auto bg-gradient-to-r from-blue-500 to-purple-400 text-white py-2 rounded-full font-medium hover:opacity-90 transition">
+              เลือกแพ็กนี้
+            </button>
+          </div>
+
+          <!-- แพ็กเกจพรีเมี่ยม -->
+          <div class="bg-green-50 border border-green-200 rounded-xl p-6 flex flex-col items-start shadow-sm">
+            <h3 class="font-bold">พรีเมียม</h3>
+            <p class="text-sm text-gray-500">Mentorship</p>
+            <p class="text-3xl font-bold text-green-600 my-4">฿5,900</p>
+            <ul class="text-sm text-gray-600 space-y-1 mb-6">
+              <li>• โค้ชส่วนตัว 2 ครั้ง</li>
+              <li>• วิดีโอโปรเจกต์ปิดคอร์ส</li>
+              <li>• เนื้อหาเสริมพิเศษ</li>
+            </ul>
+            <button class="w-full mt-auto bg-black text-white py-2 rounded-full font-medium hover:bg-gray-800 transition">
+              เลือกแพ็กนี้
+            </button>
+          </div>
+        </div>
+       </section>
+
+     <!-- FAQ -->
+    <section id="faq" class="mt-16 py-16 bg-gray-100 px-6 scroll-mt-20">
+      <div class="max-w-7xl mx-auto text-left">
+        <h3 class="text-xl font-bold text-blue-600 mb-6">คำถามที่พบบ่อย</h3>
+        <div class="space-y-4">
+          <details class="bg-purple-100 p-4 rounded-lg">
+            <summary class="cursor-pointer font-semibold">ต้องมีพื้นฐานมาก่อนหรือไม่?</summary>
+            <p class="mt-2 text-gray-700">ไม่จำเป็น คอร์สนี้สอนตั้งแต่พื้นฐาน เหมาะสำหรับผู้เริ่มต้นที่ไม่มีความรู้ AI มาก่อน</p>
+          </details>
+          <details class="bg-blue-100 p-4 rounded-lg">
+            <summary class="cursor-pointer font-semibold">มีใบประกาศนียบัตรหรือไม่?</summary>
+            <p class="mt-2 text-gray-700">มี สำหรับผู้เรียนแพ็กเกจมาตรฐานและพรีเมียมที่ทำแบบฝึกหัดครบตามเกณฑ์</p>
+          </details>
+          <details class="bg-pink-100 p-4 rounded-lg">
+            <summary class="cursor-pointer font-semibold">ดูย้อนหลังได้ไหม?</summary>
+            <p class="mt-2 text-gray-700">ได้ ทุกคลาสมีการบันทึกวิดีโอไว้ให้ดูย้อนหลังตลอดระยะเวลาคอร์ส</p>
+          </details>
+          <details class="bg-yellow-100 p-4 rounded-lg">
+            <summary class="cursor-pointer font-semibold">ต้องใช้อุปกรณ์อะไร?</summary>
+            <p class="mt-2 text-gray-700">คอมพิวเตอร์หรือแล็ปท็อปที่เชื่อมต่ออินเทอร์เน็ตได้ก็เพียงพอ ไม่จำเป็นต้องมีสเปกสูง</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Contact -->
+    <section id="contact" class="py-12 bg-gradient-to-b from-white to-blue-50 scroll-mt-20">
+      <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12">
+
+        <!-- ฟอร์ม -->
+        <div>
+          <h3 class="text-2xl font-bold mb-6 text-indigo-600">ติดต่อ & สมัครเรียน</h3>
+          <form class="p-6 bg-white rounded-xl shadow-sm space-y-4">
+
+            <!-- ชื่อ -->
+            <div>
+              <label class="block text-sm text-gray-700 mb-1 font-bold" for="fullname">ชื่อ-นามสกุล</label>
+              <input id="fullname" name="fullname" type="text" placeholder="ชื่อของคุณ" class="w-full border p-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+            </div>
+
+            <!-- อีเมล -->
+            <div>
+              <label class="block text-sm text-gray-700 mb-1 font-bold" for="email">อีเมล</label>
+              <input id="email" name="email" type="email" placeholder="you@example.com" class="w-full border p-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+            </div>
+
+            <!-- แพ็กเกจ -->
+            <div>
+              <label class="block text-sm text-gray-700 mb-1 font-bold" for="package">แพ็กเกจที่สนใจ</label>
+              <select id="package" name="package" class="w-full border p-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                <option>เริ่มต้น (Audit only)</option>
+                <option>มาตรฐาน</option>
+                <option>พรีเมียม</option>
+              </select>
+            </div>
+            <!-- ข้อความ -->
+            <div>
+              <label class="block text-sm text-gray-700 mb-1 font-bold" for="message">ข้อความ</label>
+              <textarea id="message" name="message" placeholder="สอบถามรายละเอียดหรือแจ้งความประสงค์" rows="4" class="w-full border p-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+            </div>
+            <!-- ปุ่มส่ง -->
+            <button type="submit" class="bg-blue-500 text-white px-6 py-2 rounded-2xl hover:bg-blue-600 transition">
+              ส่งคำขอ
+            </button>
+          </form>
+        </div>
+        <!-- ข้อมูลติดต่อ -->
+        <div class="flex flex-col justify-center space-y-4">
+          <p><span class="font-bold">อีเมล:</span> <span class="text-gray-600">example@mail.com</span></p>
+          <p><span class="font-bold">ที่อยู่:</span> <span class="text-gray-600">กรุงเทพฯ</span></p>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="bg-gradient-to-r from-blue-100 via-green-100 to-white text-black text-center py-4 flex flex-col md:flex-row justify-between items-center px-6 gap-2">
+      <p>ขับเคลื่อนด้วย Tailwind CSS</p>
+      <a href="#" class="whitespace-pre hover:underline">เงื่อนไขการใช้งาน | นโยบายความเป็นส่วนตัว</a>
+    </footer>
+
+    <script>
+      const menuBtn = document.getElementById('menu-btn');
+      const mobileMenu = document.getElementById('mobile-menu');
+      menuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+        mobileMenu.classList.toggle('flex');
+      });
+    </script>
+</body>
+</html>
