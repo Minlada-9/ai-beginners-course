@@ -1,72 +1,72 @@
-# 🤖 AI Academy — คอร์สพื้นฐานปัญญาประดิษฐ์ (AI for Beginners)
+# 🤖 AI Academy — Artificial Intelligence Fundamentals Course (AI for Beginners)
 
-หน้าเว็บ Landing Page แนะนำคอร์สเรียน "AI for Beginners" คอร์สพื้นฐานปัญญาประดิษฐ์ 6 สัปดาห์ สำหรับผู้เริ่มต้น ครบทั้งข้อมูลหัวข้อเรียน ผู้สอน ตารางเรียน แพ็กเกจค่าเรียน คำถามที่พบบ่อย และฟอร์มติดต่อสมัครเรียน
+This landing page introduces the "AI for Beginners" course, a 6-week introductory artificial intelligence course for beginners. It includes information on course topics, instructors, schedule, tuition packages, FAQs, and a registration form.
 
 🔗 Demo: [https://minlada-9.github.io/ai-beginners-course/](https://minlada-9.github.io/ai-beginners-course/)
 
 ---
 
-## ✨ ฟีเจอร์หลัก
+## ✨ Main Features
 
-- **Navbar** พร้อมเมนูเลื่อนไปยังแต่ละส่วนของหน้า และเมนูแฮมเบอร์เกอร์สำหรับมือถือ
-- **Hero Section** สรุปจุดเด่นของคอร์ส
-- **หัวข้อเรียน 6 สัปดาห์** ตั้งแต่พื้นฐาน AI ไปจนถึงโปรเจกต์ปิดคอร์ส
-- **ผู้สอน** แนะนำอาจารย์ผู้สอนแต่ละท่าน
-- **ตารางเรียน** ระบุวันที่ เวลา และรูปแบบการเรียน (ออนไลน์ / ห้องเรียน) ของแต่ละสัปดาห์
-- **แพ็กเกจค่าเรียน** 3 ระดับ (เริ่มต้น / มาตรฐาน / พรีเมียม) พร้อมสิทธิประโยชน์ของแต่ละแพ็กเกจ
-- **คำถามที่พบบ่อย (FAQ)** แบบ accordion (`<details>`)
-- **ฟอร์มติดต่อ & สมัครเรียน** พร้อมข้อมูลติดต่อ
-
----
-
-## 🛠️ เทคโนโลยีที่ใช้
-
-- **HTML** — โครงสร้างหน้าเว็บทั้งหมดอยู่ในไฟล์เดียว (`index.html`)
-- **Tailwind CSS** — ใช้ผ่าน [Tailwind CDN](https://cdn.tailwindcss.com) สำหรับจัดสไตล์แบบ utility-first พร้อมไฟล์ `output.css` เสริม
-- **Vanilla JavaScript** — สคริปต์เล็ก ๆ สำหรับเปิด/ปิดเมนูมือถือ
-
-> โปรเจกต์นี้เป็น **static landing page** ล้วน ๆ ไม่มี backend, ไม่มีฐานข้อมูล, และฟอร์มติดต่อยังไม่ได้เชื่อมต่อกับระบบส่งข้อมูลจริง (ยังไม่มี action/JS สำหรับ submit)
+- **Navbar** with scrollable menus for each section of the page. And a mobile hamburger menu.
+- **Hero Section:** Summary of course highlights.
+- **6-Week Course Topics:** From AI basics to the final project.
+- **Instructors:** Introduction of each instructor.
+- **Schedule:** Specifying the date, time, and learning format (online/classroom) for each week.
+- **Tuition Packages:** 3 levels (Beginner/Standard/Premium) with benefits for each package.
+- **Frequently Asked Questions (FAQ)** in accordion format (`<details>`).
+- **Contact & Registration Form:** Including contact information.
 
 ---
 
-## 📁 โครงสร้างโปรเจกต์
+## 🛠️ Technologies Used
+
+- **HTML:** — The entire webpage structure is in a single file (`index.html`).
+- **Tailwind CSS:** — Used via [Tailwind CDN](https://cdn.tailwindcss.com) for styling. Utility-first with an additional `output.css` file
+- **Vanilla JavaScript** — A small script for enabling/disabling the mobile menu
+
+> This project is a purely static landing page. There's no backend, no database, and the contact form isn't yet connected to a real submission system (no actions/JS for submitting yet).
+
+---
+
+## 📁 Project Structure
 
 ```
 ai-beginners-course/
-├── index.html      # หน้าเว็บหลัก (Landing Page) ทั้งหมด
-└── output.css      # ไฟล์ CSS เสริม (เช่น Tailwind ที่ build ไว้ หรือสไตล์เพิ่มเติม)
+├── index.html # The entire main webpage (Landing Page)
+└── output.css # Additional CSS file (e.g., built-in Tailwind or additional styles)
 ```
 
 ---
 
-## ⚙️ วิธีใช้งาน
+## ⚙️ How to Use
 
-โปรเจกต์นี้เป็นหน้าเว็บ static ไม่ต้องติดตั้ง dependencies หรือรัน build ใด ๆ
+This project is a static webpage; no dependencies or builds are required.
 
-### เปิดใช้งานตรง ๆ
+### Direct Activation
 
-เปิดไฟล์ `index.html` ด้วยเบราว์เซอร์ได้เลย
+Open the `index.html` file with your browser.
 
-### หรือรันผ่าน local server (แนะนำ)
+### Or run it via a local server (recommended)
 
 ```bash
 npx serve .
 ```
 
-หรือ
+or
 
 ```bash
 python3 -m http.server 5500
 ```
 
-แล้วเปิดเบราว์เซอร์ไปที่ `http://localhost:5500`
+then open your browser to `http://localhost:5500`
 
 ---
 
-## 📌 หมายเหตุ
+## 📌 Note
 
-- ฟอร์ม "ติดต่อ & สมัครเรียน" ยังเป็นเพียง UI เท่านั้น ยังไม่มีการเชื่อมต่อ backend/อีเมล/Google Sheet เพื่อรับข้อมูลจริง หากต้องการใช้งานจริงต้องเพิ่ม endpoint หรือบริการรับฟอร์ม (เช่น Formspree, Google Form, หรือเขียน API เอง)
-- รูปภาพในหน้าเว็บดึงมาจาก Unsplash (ระบุเครดิตไว้ในคอมเมนต์ของโค้ด)
+- The "Contact & Enrollment" form is currently just a UI. It does not yet connect to a backend/email/Google Sheet to collect actual data. For real-world use, you need to add an endpoint or form acceptance service (e.g., Formspree, Google Forms, or write your own API).
+- Images on the webpage are from Unsplash (credits are indicated in the code comments).
 
 ---
 
